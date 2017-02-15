@@ -16,9 +16,12 @@
             $player_one = $this->user_one;
             $player_two = $this->user_two;
 
-            if ($player_one != $player_two)
+            if (($player_one == "rock" && $player_two == "scissors") || ($player_one == "scissors" && $player_two == "paper") || $player_one == "paper" && $player_two == "rock")
             {
-                return "win";
+                return "player one wins";
+            }
+            elseif (($player_two == "rock" && $player_one == "scissors") || ($player_two == "scissors" && $player_one == "paper") || $player_two == "paper" && $player_one == "rock"){
+                return "player two wins";
             }
             else {
                 return "draw";
