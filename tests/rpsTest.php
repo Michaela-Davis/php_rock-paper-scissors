@@ -17,5 +17,19 @@
             $this->assertEquals("draw", $result);
         }
 
+        function test_rpsChecker_win()
+        {
+        //arrange
+            $input_one = "rock";
+            $input_two = "paper";
+            $test_RPS = new RockPaperScissors($input_one, $input_two);
+
+        //act
+            $result = $test_RPS->rpsChecker($input_one, $input_two);
+
+        //assert
+            $this->assertEquals("win", $result);
+        }
+
     }
 ?>
