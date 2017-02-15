@@ -11,7 +11,7 @@
             $test_RPS = new RockPaperScissors($input_one, $input_two);
 
         //act
-            $result = $test_RPS->rpsChecker($input_one, $input_two);
+            $result = $test_RPS->rpsChecker();
 
         //assert
             $this->assertEquals("draw", $result);
