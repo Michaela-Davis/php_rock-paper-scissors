@@ -6,16 +6,15 @@
         function test_rpsChecker()
         {
         //arrange
-            $newVariable = new Ana;
-
-            $input1 = "word";
-            $input2 = array("rodw");
+            $input_one = "r";
+            $input_two = "";
+            $newClass = new RPS($input_one, $input_two);
 
         //act
-            $result = $newVariable->rpsChecker($input1, $input2);
+            $result = $newClass->rpsChecker($input_one, $input_two);
 
         //assert
-            $this->assertEquals("yes" , $result);
+            $this->assertEquals(false, $result);
         }
 
     }
