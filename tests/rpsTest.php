@@ -1,20 +1,20 @@
  <?php
- require_once "src/rps.php";
+ require_once __DIR__ . "/../src/RPS.php";
 
- class rpsTest extends PHPUnit_Framework_TestCase
+ class RockPaperScissorsTest extends PHPUnit_Framework_TestCase
     {
-        function test_rpsChecker()
+        function test_rpsChecker_draw()
         {
         //arrange
-            $input_one = "r";
-            $input_two = "";
-            $newClass = new RPS($input_one, $input_two);
+            $input_one = "rock";
+            $input_two = "rock";
+            $test_RPS = new RockPaperScissors($input_one, $input_two);
 
         //act
-            $result = $newClass->rpsChecker($input_one, $input_two);
+            $result = $test_RPS->rpsChecker($input_one, $input_two);
 
         //assert
-            $this->assertEquals(false, $result);
+            $this->assertEquals("draw", $result);
         }
 
     }

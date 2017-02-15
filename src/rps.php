@@ -1,5 +1,5 @@
 <?php
-    class RPS
+    class RockPaperScissors
     {
 
         private $user_one;
@@ -10,9 +10,14 @@
         $this->user_one = $input_one;
         $this->user_two = $input_two;
         }
+
         function rpsChecker()
         {
-            return false;
+            $player_one = $this->user_one;
+            $player_two = $this->user_two;
+
+            if ($player_one == $player_two)
+            return "draw";
         }
     }
 
