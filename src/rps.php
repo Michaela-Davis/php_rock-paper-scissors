@@ -16,8 +16,13 @@
             $player_one = $this->user_one;
             $player_two = $this->user_two;
 
-            if ($player_one == $player_two)
-            return "draw";
+            if ($player_one != $player_two)
+            {
+                return "win";
+            }
+            else {
+                return "draw";
+            }
         }
     }
 
